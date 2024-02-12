@@ -1,0 +1,16 @@
+Create contact groups - https://developers.google.com/people/api/rest/v1/contactGroups/create?hl=en 
+
+Create Contact  - https://developers.google.com/people/api/rest/v1/people/createContact?hl=en 
+
+Search Contacts to verify the presence of the created contact - https://developers.google.com/people/api/rest/v1/people/searchContacts?hl=en 
+
+Update Contact - https://developers.google.com/people/api/rest/v1/people/updateContact?hl=en 
+
+Update Group - https://developers.google.com/people/api/rest/v1/contactGroups/update?hl=en 
+
+Delete Contact - https://developers.google.com/people/api/rest/v1/people/deleteContact?hl=en 
+
+Delete Group - https://developers.google.com/people/api/rest/v1/contactGroups/delete?hl=en 
+
+List Group to confirm that the group is deleted - https://developers.google.com/people/api/rest/v1/contactGroups/list?hl=en
+ 

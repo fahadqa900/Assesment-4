@@ -1,0 +1,322 @@
+{
+	"info": {
+		"_postman_id": "c3454165-bf0c-419a-954c-cc474e2620eb",
+		"name": "TestCollection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "24632078",
+		"_collection_link": "https://bold-comet-247193.postman.co/workspace/New-WorkSpace~6b7c82ef-9282-45fb-8355-711e162d83be/collection/24632078-c3454165-bf0c-419a-954c-cc474e2620eb?action=share&source=collection_link&creator=24632078"
+	},
+	"item": [
+		{
+			"name": "CreateContactGroups",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "ya29.a0AfB_byAYGhZniqoFT5Jx-t3z2GqZQjdSXkOJuF83fSD-abZxPgA9qKGaTIynwEVfSgzZIKl6r-e8cvqkjX2TcFUDV3T9IQwN_eSODF1FF3tqiOzFeREwtpGR3nWSvaDynFLI_EDT292bNOTrFa9prpGnG_xLn5BPTtNBaCgYKAXESARESFQHGX2MiiUQIGOZalR86N_XUGlVMig0171",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"contactGroup\": {\r\n        \"name\": \"Fahad Test Group\"\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://people.googleapis.com/v1/contactGroups",
+					"protocol": "https",
+					"host": [
+						"people",
+						"googleapis",
+						"com"
+					],
+					"path": [
+						"v1",
+						"contactGroups"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CreateContact",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "ya29.a0AfB_byBIYo3eaLQkZYYoxLrfjVPep6qfpTyY4FFFUluAZWQQNMZdE_rGBc3bd7uqO3cyJpokaiHNoUnlDu3olAtxtVYXjjyda2vc0EJK2wt1mb3OUvoYXkZAre9Se9n11C0O7hOo8k_q165q7IbSv1EQozzjeO2isaAnaCgYKAUISARESFQHGX2Mi9zjgKYnRu5mevwJGBgMMVA0171",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"names\": [\r\n        {\r\n            \"givenName\": \"FahadTest1\",\r\n            \"familyName\": \"Fahad1\"\r\n        }\r\n    ],\r\n    \"emailAddresses\": [\r\n        {\r\n            \"value\": \"fahad@gmail.com\"\r\n        }\r\n    ],\r\n    \"phoneNumbers\": [\r\n        {\r\n            \"value\": \"123456789\",\r\n            \"type\" : \"Home\"\r\n\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://people.googleapis.com/v1/people:createContact",
+					"protocol": "https",
+					"host": [
+						"people",
+						"googleapis",
+						"com"
+					],
+					"path": [
+						"v1",
+						"people:createContact"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "SearchContacts",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "ya29.a0AfB_byBIYo3eaLQkZYYoxLrfjVPep6qfpTyY4FFFUluAZWQQNMZdE_rGBc3bd7uqO3cyJpokaiHNoUnlDu3olAtxtVYXjjyda2vc0EJK2wt1mb3OUvoYXkZAre9Se9n11C0O7hOo8k_q165q7IbSv1EQozzjeO2isaAnaCgYKAUISARESFQHGX2Mi9zjgKYnRu5mevwJGBgMMVA0171",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://people.googleapis.com/v1/people:searchContacts",
+					"protocol": "https",
+					"host": [
+						"people",
+						"googleapis",
+						"com"
+					],
+					"path": [
+						"v1",
+						"people:searchContacts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UpdateContact",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "ya29.a0AfB_byCAapIhC2VCzdfLm4uSYp0WUA_5HxJJsYVMZJf7MJCIVK-5T-QpZM0QhBwdpPoW-oOS5jeruvcZc3YYzuKRy9TEmneKKx-XahUeNG42RkMuyvPx47rUqxGMEVHDH76fZVXe27Gzqzv_TPbsLcJpJCHQHtVtSDNyaCgYKAe8SARESFQHGX2MiKS-x6jgF_NKdLJqKIa3wVQ0171",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"names\":[\r\n        {\r\n           \"givenName\":\"FahadTest1\",\r\n           \"familyName\":\"Fahad1\" \r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://people.googleapis.com/v1/{person.resourceName=people/c3834638999980362044",
+					"protocol": "https",
+					"host": [
+						"people",
+						"googleapis",
+						"com"
+					],
+					"path": [
+						"v1",
+						"{person.resourceName=people",
+						"c3834638999980362044"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Group",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "ya29.a0AfB_byDzSQsuEb8MQgeeF7Iv3RwEkeSEpypWxChcOiLx043iDSTkCxpFchrzMk9XezrgO5lKDNIXgc6MrnhtiKhD9lPFTu63SQ1gyzsGajCsWu1f9c2ctKWd2CWWNs_NZq_XLwSJkL_uHLYg-w1BMScw9f-cGH4QZTk0aCgYKAY8SARESFQHGX2MirGCN7d5mU6VN4YBPH85qog0171",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"contactGroup\": {\r\n    \"name\": \"jaipurgosc1\",\r\n    \"clientData\": [\r\n      {\r\n        \"key\": \"id\",\r\n        \"value\": \"456\"\r\n      },\r\n      {\r\n        \"key\": \"name\",\r\n        \"value\": \"updatedName\"\r\n      }\r\n    ]\r\n  },\r\n  \"readGroupFields\": \"\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://people.googleapis.com/v1/contactGroups/1be4613c093df62f",
+					"protocol": "https",
+					"host": [
+						"people",
+						"googleapis",
+						"com"
+					],
+					"path": [
+						"v1",
+						"contactGroups",
+						"1be4613c093df62f"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Contact",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "ya29.a0AfB_byBLnW3l1jr2sxa4LE1yb7QyNUpByvWYwf9MU33W7V8kVe-oJWJm1YPQqkXPhdzqg29V91mI39Otj_zM4Kp8fGdN_0CR2wr4wqXvOXL5Q4hzN0G7aqrNCfgclLCdnEzvGdqkTUOKRJ90DSo-zT8THsJDjBB48L-EaCgYKASQSARESFQHGX2Mi7zJv_IOvc3O6105xTYWyMA0171",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "https://people.googleapis.com/v1/people/c3834638999980362044",
+					"protocol": "https",
+					"host": [
+						"people",
+						"googleapis",
+						"com"
+					],
+					"path": [
+						"v1",
+						"people",
+						"c3834638999980362044"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Group",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "ya29.a0AfB_byBLnW3l1jr2sxa4LE1yb7QyNUpByvWYwf9MU33W7V8kVe-oJWJm1YPQqkXPhdzqg29V91mI39Otj_zM4Kp8fGdN_0CR2wr4wqXvOXL5Q4hzN0G7aqrNCfgclLCdnEzvGdqkTUOKRJ90DSo-zT8THsJDjBB48L-EaCgYKASQSARESFQHGX2Mi7zJv_IOvc3O6105xTYWyMA0171",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "https://people.googleapis.com/v1/contactGroups/4ecd41bf0b159c42",
+					"protocol": "https",
+					"host": [
+						"people",
+						"googleapis",
+						"com"
+					],
+					"path": [
+						"v1",
+						"contactGroups",
+						"4ecd41bf0b159c42"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "List Group",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "ya29.a0AfB_byBLnW3l1jr2sxa4LE1yb7QyNUpByvWYwf9MU33W7V8kVe-oJWJm1YPQqkXPhdzqg29V91mI39Otj_zM4Kp8fGdN_0CR2wr4wqXvOXL5Q4hzN0G7aqrNCfgclLCdnEzvGdqkTUOKRJ90DSo-zT8THsJDjBB48L-EaCgYKASQSARESFQHGX2Mi7zJv_IOvc3O6105xTYWyMA0171",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://people.googleapis.com/v1/contactGroups",
+					"protocol": "https",
+					"host": [
+						"people",
+						"googleapis",
+						"com"
+					],
+					"path": [
+						"v1",
+						"contactGroups"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
